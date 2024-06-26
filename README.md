@@ -12,7 +12,7 @@
  
 ### Structure
 
- * Clean Architecture 3layer
+ * Clean Architecture 3 layer
 
 ### Database
 
