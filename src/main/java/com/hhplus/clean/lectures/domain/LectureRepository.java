@@ -6,6 +6,8 @@ import java.util.List;
 
 public interface LectureRepository {
 
+    List<Lecture> findLectures();
+
     Lecture findLectureById(Long lectureId);
 
     List<ApplyLecture> findApplyLectureListByLectureId(Long lectureId);

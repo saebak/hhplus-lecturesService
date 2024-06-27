@@ -34,6 +34,20 @@ public class LectureRepositoryImpl implements LectureRepository {
     }
 
     /**
+     * 특강 목록 조회
+     * @return
+     */
+    public List<Lecture> findLectures() {
+        List<LectureEntity> entityList = jpaRepository.findAll();
+
+        List<Lecture> lectures = new ArrayList<Lecture>();
+        for(LectureEntity entity : entityList) {
+            lectures.add(LectureMapper.toDomain(entity));
+        }
+        return lectures;
+    }
+
+    /**
      * 해당 id의 특강 조회
      * @param lectureId
      * @return
